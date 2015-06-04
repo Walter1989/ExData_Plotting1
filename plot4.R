@@ -13,7 +13,7 @@ mydata <- (subset(mydata, Date == "1/2/2007" | Date == "2/2/2007"))
 mydata$Date <- as.Date(dmy(mydata$Date))
 mydata$Datetime <- as.POSIXct(paste(mydata$Date, mydata$Time), format="%Y-%m-%d %H:%M:%S")
 
-# create the second plot (histogram of distribution of Global Active power).
+# create the fourth plot (global active power over time, voltage over time, energy by metering over time, global reactive power over time).
 png("plot4.png")
 par(mfrow = c(2,2))
 plot(mydata$Datetime, mydata$Global_active_power, type = "l", xlab = "", ylab = "Global active power")
